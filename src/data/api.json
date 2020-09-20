@@ -1,0 +1,46 @@
+[
+  {
+    "code": "FR",
+    "carbonintensity": 86
+  },
+  {
+    "code": "TW",
+    "carbonintensity": 556
+  },
+  {
+    "code": "DE",
+    "carbonintensity": 223
+  },
+  {
+    "code": "GB",
+    "carbonintensity": 212
+  },
+  {
+    "code": "FI",
+    "carbonintensity": 140
+  },
+  {
+    "code": "ES",
+    "carbonintensity": 169
+  },
+  {
+    "code": "SA",
+    "carbonintensity": 169
+  },
+  {
+    "code": "IN",
+    "carbonintensity": 568
+  },
+  {
+    "code": "PL",
+    "carbonintensity": 605
+  },
+  {
+    "code": "SE",
+    "carbonintensity": 38
+  },
+  {
+    "code": "US",
+    "carbonintensity": 990
+  }
+]
