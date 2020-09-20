@@ -1,0 +1,77 @@
+[
+  {
+    "name" : "Greenhouse Gas from",
+    "conversions": [
+      {
+        "description": "Passenger vehicles driven for one year",
+        "amt": 0.0002
+      },
+      {
+        "description": "Miles driven by an average passenger vehicle",
+        "amt": 1.8
+      }
+    ]
+  },
+  {
+    "name" : "CO2 emissions from",
+    "conversions": [
+      {
+        "description": "Gallons of gasoline consumed",
+        "amt": 0.08
+      },
+      {
+        "description": "Gallons of diesel consumed",
+        "amt": 0.069
+      },
+      {
+        "description": "Pounds of coal burned",
+        "amt": 0.0779
+      },
+      {
+        "description": "Tanker trucks' worth of gasoline",
+        "amt": 0.000009
+      },
+      {
+        "description": "Homes' energy use for one year",
+        "amt": 0.00008
+      },
+      {
+        "description": "Homes' electricity use for one year",
+        "amt": 0.00012
+      },
+      {
+        "description": "Railcars' worth of coal burned",
+        "amt": 0.000004
+      },
+      {
+        "description": "Barrels of oil consumed",
+        "amt": 0.00164
+      },
+      {
+        "description": "Propane cylinders used for home barbeques",
+        "amt": 0.029
+      },
+      {
+        "description": "Number of smartphones charged",
+        "amt": 90.17
+      }
+    ]
+  },
+  {
+    "name" : "Carbon Sequestered by",
+    "conversions": [
+      {
+        "description": "Tree seedlings grown for 10 years",
+        "amt": 0.012
+      },
+      {
+        "description": "Acres of U.S. forests in one year",
+        "amt": 0.0009
+      },
+      {
+        "description": "Acres of U.S. forests preserved from conversion to cropland in one year",
+        "amt": 0.0000048
+      }
+    ]
+  }
+]

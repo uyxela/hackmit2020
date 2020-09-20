@@ -1,37 +1,30 @@
 // THIS IS A MODULE; USE `import { training, inference } from 'logic';`
 import gpus from "../data/gpus.json";
 import sources from "../data/sources.json";
+import models from "../data/models.json";
 
-function training(gpuhardware, hours, provider, region) {
-  let carbon = 1; // in units of kg of CO2
-  gpus.forEach((gpu) => {
-    if (gpu.name === gpuhardware) {
-      carbon *= gpu.watt;
+function training(gpuhardware, hours, provider, region, modelname) {
+  let carbon = 3600 * hours * hours; // in units of kg of CO2
+  models.forEach((model) => {
+    if (model.name === modelname) {
+      carbon *= model.flops;
     }
   });
+
+  gpus.forEach((gpu) => {
+    if (gpu.name === gpuhardware) {
+      carbon *= 1.0 / gpu["GFLOPS32/W"];
+    }
+  });
+
   sources.forEach((source) => {
     if (source.provider === provider && source.region === region) {
       carbon *= source.impact / 1000.0;
     }
   });
-
-  return carbon * hours;
-}
-
-function inference(gpuhardware, hours, provider, region) {
-  let carbon = 1; // in units of kg of CO2
-  gpus.forEach((gpu) => {
-    if (gpu.name === gpuhardware) {
-      carbon *= gpu.watt;
-    }
-  });
-  sources.forEach((source) => {
-    if (source.provider === provider && source.region === region) {
-      carbon *= source.impact / 1000.0;
-    }
-  });
+  // (GFLOP / s) * (3600s / hr) * hrs * (W/GFLOPS32) * hrs * (kg CO2 / KWh)
 
   return carbon;
 }
 
-export default { training, inference };
+export default training;
