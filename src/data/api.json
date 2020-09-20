@@ -42,5 +42,21 @@
   {
     "code": "US",
     "carbonintensity": 990
+  },
+  {
+    "code": "JP",
+    "carbonintensity": 420
+  },
+  {
+    "code": "CZ",
+    "carbonintensity": 286
+  },
+  {
+    "code": "RU",
+    "carbonintensity": 368
+  },
+  {
+    "code": "IE",
+    "carbonintensity": 493
   }
 ]
