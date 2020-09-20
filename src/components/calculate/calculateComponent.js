@@ -17,6 +17,7 @@ const CalculateComponentContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding: 10px;
 `;
 
 function CalculateComponent(props) {
