@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Stage, Layer, Path } from "react-konva";
-import { equivnum, calcCarbon } from '../logic';
+import { equivnum } from '../logic';
 import convs from '../../data/gfgconvs.json';
 import images from '../../assets/images/images.json';
 
 const VisualizationTitle = styled.h2`
   font-weight: bold;
   font-size: 2rem;
-  margin: 40px;
-`;
-
-const VisualizationSubtitle = styled.h2`
-  font-weight: medium;
-  font-size: 1.75rem;
   margin: 40px;
 `;
 
@@ -62,33 +56,24 @@ const determineTitle = (metric, carbon) => {
   return (`${conv.name} ${conv.description} (${num})`);
 }
 
-
-
-function Visualization(props) {
+function VisualizationUser(props) {
   const [number, setNumber] = useState(generateShapes(0, 1));
   const [metric, setMetric] = useState('car');
-  const [conversionData, setConversionData] = useState(calcCarbon(props.computer.Name));
+  const conversionData = JSON.parse(window.localStorage.getItem('conversionData'));
   const [data, setData] = useState('M9.5 3H9V1.5a.5.5 0 0 0-1 0V3a1 1 0 0 0 1 1v4.25a.25.25 0 1 1-.5 0V6.5A1.5 1.5 0 0 0 7 5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1V6a.5.5 0 0 1 .5.5v1.75a1.25 1.25 0 1 0 2.5 0V3.5a.5.5 0 0 0-.5-.5zM6 4.5a.49.49 0 0 1-.48.5h-3A.51.51 0 0 1 2 4.5V3a.5.5 0 0 1 .5-.5h3A.5.5 0 0 1 6 3v1.5z');
 
-  // eslint-disable-next-line
   useEffect(() => {
     const image = images.find(img => img.name === metric);
-    setConversionData(calcCarbon(props.computer.Name));
-    setNumber(generateShapes(Math.ceil(equivnum(metric,conversionData)), image.scale));
+    setNumber(generateShapes(Math.ceil(equivnum(metric,conversionData.carbon)), image.scale));
     setData(image.path);
-  }, [metric, props]);
+    // eslint-disable-next-line
+  }, [metric]);
 
   return (
     <>
       <VisualizationTitle>
-        {`${props.computer.Name} - ${props.computer.Computer}`}
+        Putting your data into perspective
       </VisualizationTitle>
-      <VisualizationSubtitle>
-        {`Green500 Rank: ${props.computer.Rank}, TOP500 Rank: ${props.computer['TOP500 Rank']}`}
-      </VisualizationSubtitle>
-      <VisualizationDescription>
-        {`Country: ${props.computer.Country}, Power (kW): ${props.computer['Power (kW)']}, Power Efficiency (GFlops/Watts): ${props.computer['Power Efficiency [GFlops/Watts]']}`}
-      </VisualizationDescription>
       <VisualizationContainer>
         <Stage width={600} height={400} style={{ margin: "20px", border: "4px solid #45AA29" }}>
           <Layer>
@@ -125,4 +110,4 @@ function Visualization(props) {
   );
 }
 
-export default Visualization;
+export default VisualizationUser;

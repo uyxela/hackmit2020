@@ -2,6 +2,8 @@ import gpus from "../data/gpus.json";
 import sources from "../data/sources.json";
 import models from "../data/models.json";
 import gfgconvs from "../data/gfgconvs.json";
+import green from '../data/green500.json';
+import countries from '../data/countries.json';
 
 export function withprovider(gpuhardware, hours, provider, region, modelname) {
   // Eq: (GFLOP / s) * (3600s / hr) * hrs * (W/GFLOPS32) * hrs * (kg CO2 / KWh)
@@ -99,4 +101,44 @@ export function equivnum(pattern, carbon) {
     "ERROR IN EQUIVNUM(): DID NOT FIND `" + pattern + "` IN THE JSON"
   );
   return carbon * 0.4; // default (should never get to this case)
+}
+
+export function calcCarbon(name) {
+  const machine = green.find(item => item.Name === name);
+  console.log(machine);
+  let power;
+  let carbonIntensity;
+  if (machine) {
+    power = machine["Power (kW)"];
+    const country = countries.find(item => item.name === machine.Country);
+
+    var myHeaders = new Headers();
+    myHeaders.append("auth-token", "9d4f72692b0aa319");
+    
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow',
+      mode: 'no-cors'
+    };
+    
+    fetch("https://api.co2signal.com/v1/latest?countryCode=FR", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        carbonIntensity = Math.round(result.data.carbonIntensity * 100)/100;
+      })
+      .catch(error => console.log('error', error));
+
+    // fetch(`https://api.co2signal.com/v1/latest?countryCode=${country['alpha-2']}`, {
+    //   mode: 'no-cors',
+    //   headers: {
+    //     "Auth-Token": "9d4f72692b0aa319"
+    //   }
+    // }).then(response => response.json()).then(jsonResponse => {
+    //   console.log(jsonResponse);
+    //   carbonIntensity = Math.round(jsonResponse.data.carbonIntensity * 100)/100;
+    // })
+  }
+  return power * carbonIntensity;
 }
