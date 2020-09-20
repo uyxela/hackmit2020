@@ -4,6 +4,7 @@ import { Stage, Layer, Path } from "react-konva";
 import { equivnum, calcCarbon } from '../logic';
 import convs from '../../data/gfgconvs.json';
 import images from '../../assets/images/images.json';
+import green from '../../data/green500.json';
 
 const VisualizationTitle = styled.h2`
   font-weight: bold;
@@ -63,7 +64,7 @@ const determineTitle = (metric, carbon) => {
 }
 
 function Visualization(props) {
-  const [computer, setComputer] = useState(props.computer);
+  const [computer, setComputer] = useState(green.find(item => item.Name === props.computer));
   const [number, setNumber] = useState(generateShapes(0, 1));
   const [metric, setMetric] = useState('smartphones');
   const [conversionData, setConversionData] = useState(calcCarbon(computer.Name));
@@ -71,7 +72,7 @@ function Visualization(props) {
 
   useEffect(() => {
     const image = images.find(img => img.name === metric);
-    setComputer(props.computer);
+    setComputer(green.find(item => item.Name === props.computer));
     setNumber(generateShapes(Math.ceil(equivnum(metric,conversionData)), image.scale));
     setConversionData(calcCarbon(computer.Name))
     setData(image.path);
