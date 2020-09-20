@@ -51,7 +51,7 @@ function Calculate() {
         <CalculateTitle>Calculate Your Impact</CalculateTitle>
         <CalculateDescription>
           Find the carbon impact of a machine learning model computation by
-          indicating indicating relevant configuration options.
+          indicating relevant configuration options.
         </CalculateDescription>
         <br />
         <CalculateDescription>

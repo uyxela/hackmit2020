@@ -85,11 +85,16 @@ export function withee(gpuhardware, hours, ee, modelname) {
 }
 
 export function equivnum(pattern, carbon) {
-  gfgconvs.forEach((gfgconv) => {
-    if (pattern === gfgconv.id) {
-      return carbon * gfgconv.amt;
-    }
-  });
+  // gfgconvs.forEach((gfgconv) => {
+  //   console.log(gfgconv.id)
+  //   if (pattern === gfgconv.id) {
+  //     return carbon * gfgconv.amt;
+  //   }
+  // });
+  const conv = gfgconvs.find(gfgconv => gfgconv.id === pattern);
+  if (conv) {
+    return carbon * conv.amt;
+  }
   console.log(
     "ERROR IN EQUIVNUM(): DID NOT FIND `" + pattern + "` IN THE JSON"
   );

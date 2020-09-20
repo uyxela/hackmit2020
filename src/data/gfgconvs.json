@@ -14,7 +14,7 @@
   {
     "id": "coal",
     "name": "CO2 emissions from",
-    "description": "pounds of coal burned (1 coal/1,000 pounds)",
+    "description": "pounds of coal burned",
     "amt": 1.1
   },
   {
@@ -38,7 +38,7 @@
   {
     "id": "smartphones",
     "name": "CO2 emissions from",
-    "description": "number of smartphones charged (1 phone/10,000 charged)",
+    "description": "number of smartphones charged",
     "amt": 90.17
   },
   {

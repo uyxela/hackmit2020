@@ -36,9 +36,9 @@ function Header() {
             <Logo src={logoSrc} onClick={() => window.location.replace("/")} />
             <Nav>
                 <NavButton href="/calculate">Calculate</NavButton>
+                <NavButton href="/compare">Compare</NavButton>
                 <NavButton href="/learn">Learn</NavButton>
                 <NavButton href="/about">About</NavButton>
-                <NavButton href="/Ranking">Ranking</NavButton>
             </Nav>
         </NavBar>
     )
