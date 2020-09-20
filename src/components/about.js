@@ -8,6 +8,7 @@ const AboutContainer = styled.div`
     justify-content: center;
     background-color: #83D86F;
     padding: 15vh 0 15vh 0;
+    min-height: 60vh;
 `;
 
 const ComponentContainer = styled.div`
@@ -58,10 +59,10 @@ const AboutName = styled.h2`
     font-size: 3rem;
 `;
 
-const AboutBio = styled.h3`
-    color: white;
-    font-size: 1.5rem;
-`;
+// const AboutBio = styled.h3`
+//     color: white;
+//     font-size: 1.5rem;
+// `;
 
 function About() {
     return (
@@ -76,17 +77,17 @@ function About() {
                     <AboutItem>
                         <AboutImage />
                         <AboutName>Alex Yu</AboutName>
-                        <AboutBio>One liner</AboutBio>
+                        {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
                         <AboutName>Andy Vo</AboutName>
-                        <AboutBio>One liner</AboutBio>
+                        {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
                         <AboutName>Dhrumil Patel</AboutName>
-                        <AboutBio>One liner</AboutBio>
+                        {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                 </AboutSection>
                 <AboutDescription>Through Green Machine we hope to make the future of computation more environmentally friendly!</AboutDescription>
