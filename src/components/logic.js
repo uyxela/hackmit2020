@@ -112,7 +112,7 @@ export function calcCarbon(name) {
   if (machine) {
     power = machine["Power (kW)"];
     const country = countries.find((item) => item.name === machine.Country);
-
+    console.log(country);
     let s = country["alpha-2"];
     api.forEach((ap) => {
       if (ap.code === s) {
