@@ -35,13 +35,6 @@ const LearnTitle = styled.h1`
     margin: 50px;
 `;
 
-const LearnLeftHeader = styled.h1`
-    color: white;
-    font-size: 5rem;
-    font-weight: bold;
-    margin: 20px;
-`;
-
 const LearnText = styled.p`
     color: white;
     font-size: 1-rem;

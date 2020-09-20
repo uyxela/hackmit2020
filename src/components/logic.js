@@ -115,7 +115,7 @@ export function calcCarbon(name) {
 
     let s = country["alpha-2"];
     api.forEach((ap) => {
-      if (ap.code == s) {
+      if (ap.code === s) {
         carbonIntensity = ap.carbonintensity / 1000.0;
       }
     });
