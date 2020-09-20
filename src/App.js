@@ -6,6 +6,7 @@ import Calculate from "./components/calculate";
 import Header from "./components/header";
 import Home from "./components/home";
 import Learn from "./components/learn";
+import Ranking from "./components/Ranking";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/calculate" component={Calculate} />
         <Route path="/learn" component={Learn} />
         <Route path="/about" component={About} />
+        <Route path="/ranking" component={Ranking} />
       </Router>
     </>
   );

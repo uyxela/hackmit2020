@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Stage, Layer, Star, Text } from "react-konva";
-import car from "../../assets/images/car.png";
+import { Stage, Layer, Star, Text, Image } from "react-konva";
+import car from "../../assets/images/oil.svg";
 
 const VisualizationTitle = styled.h2`
   font-weight: bold;
@@ -41,30 +41,9 @@ function Visualization(props) {
       <VisualizationTitle>
         Putting your data into perspective
       </VisualizationTitle>
-      <Stage width={"600px"} height={"600px"}>
+      <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
-          {stars.map((star) => (
-            <Star
-              key={star.id}
-              id={star.id}
-              x={star.x}
-              y={star.y}
-              numPoints={5}
-              innerRadius={20}
-              outerRadius={40}
-              fill="#89b717"
-              opacity={0.8}
-              draggable
-              rotation={star.rotation}
-              shadowColor="black"
-              shadowBlur={10}
-              shadowOpacity={0.6}
-              shadowOffsetX={star.isDragging ? 10 : 5}
-              shadowOffsetY={star.isDragging ? 10 : 5}
-              scaleX={star.isDragging ? 1.2 : 1}
-              scaleY={star.isDragging ? 1.2 : 1}
-            />
-          ))}
+          <Image x={150} y={150} image={car} />
         </Layer>
       </Stage>
       <VisualizationButton
