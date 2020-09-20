@@ -9,19 +9,26 @@ export function training(gpuhardware, hours, provider, region, modelname) {
       carbon *= model.flops;
     }
   });
+  // `carbon`: The number of floating point operations that will occur in execution
+  console.log("# of GFLOPS that will occur: " + carbon);
 
   gpus.forEach((gpu) => {
     if (gpu.name === gpuhardware) {
-      carbon *= 1.0 / gpu["GFLOPS32/W"];
+      carbon /= gpu["GFLOPS32/W"];
     }
   });
+  // `carbon`: The wattage of the model
+  carbon *= hours;
+  carbon /= 1000.0;
+  console.log("The kWh: " + carbon);
 
   sources.forEach((source) => {
     if (source.provider === provider && source.region === region) {
-      carbon *= source.impact / 1000.0;
+      carbon *= source.impact;
     }
   });
+  
   // (GFLOP / s) * (3600s / hr) * hrs * (W/GFLOPS32) * hrs * (kg CO2 / KWh)
-
+  console.log("final kg of CO2: " + carbon);
   return carbon;
 }
