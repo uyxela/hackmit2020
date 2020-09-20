@@ -45,6 +45,8 @@ const AboutItem = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30%;
+    min-width: 200px;
 `;
 
 const AboutImage = styled.img`
@@ -58,7 +60,7 @@ const AboutName = styled.h2`
 
 const AboutBio = styled.h3`
     color: white;
-    font-size: 2.25rem;
+    font-size: 1.5rem;
 `;
 
 function About() {
@@ -78,12 +80,12 @@ function About() {
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
-                        <AboutName>Alex Yu</AboutName>
+                        <AboutName>Andy Vo</AboutName>
                         <AboutBio>One liner</AboutBio>
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
-                        <AboutName>Alex Yu</AboutName>
+                        <AboutName>Dhrumil Patel</AboutName>
                         <AboutBio>One liner</AboutBio>
                     </AboutItem>
                 </AboutSection>
