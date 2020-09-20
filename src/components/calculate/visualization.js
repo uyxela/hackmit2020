@@ -5,7 +5,7 @@ function Visualization(props) {
     return (
         <>
             Visualization
-            <button onClick={() => {props.setStep(1)}}>Start over</button>
+            <button onClick={() => {props.setStep(1); window.localStorage.removeItem('calculateData')}}>Start over</button>
         </>
     )
 }

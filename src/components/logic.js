@@ -1,10 +1,9 @@
-// THIS IS A MODULE; USE `import { training, inference } from 'logic';`
 import gpus from "../data/gpus.json";
 import sources from "../data/sources.json";
 import models from "../data/models.json";
 
-function training(gpuhardware, hours, provider, region, modelname) {
-  let carbon = 3600 * hours; // total number of seconds
+export function training(gpuhardware, hours, provider, region, modelname) {
+  let carbon = 3600 * hours * hours; // in units of kg of CO2
   models.forEach((model) => {
     if (model.name === modelname) {
       carbon *= model.flops;
@@ -33,5 +32,3 @@ function training(gpuhardware, hours, provider, region, modelname) {
   console.log("final kg of CO2: " + carbon);
   return carbon;
 }
-
-export default training;
