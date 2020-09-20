@@ -86,7 +86,7 @@ export function withee(gpuhardware, hours, ee, modelname) {
 
 export function equivnum(pattern, carbon) {
   gfgconvs.forEach((gfgconv) => {
-    if (pattern === gfgconv.name) {
+    if (pattern === gfgconv.id) {
       return carbon * gfgconv.amt;
     }
   });

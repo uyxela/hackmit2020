@@ -2,120 +2,67 @@
   {
     "name": "Greenhouse Gas from",
     "id": "car",
-    "description": "Passenger vehicles driven for one year",
+    "description": "passenger vehicles driven for one year",
     "amt": 0.0002
-  },
-  {
-    "name": "Greenhouse Gas from",
-    "description": "Miles driven by an average passenger vehicle",
-    "amt": 2.5
   },
   {
     "id": "fuel",
     "name": "CO2 emissions from",
-    "description": "Gallons of gasoline consumed",
+    "description": "gallons of gasoline consumed",
     "amt": 0.113
-  },
-  {
-    "id": "diesel",
-    "name": "CO2 emissions from",
-    "description": "Gallons of diesel consumed",
-    "amt": 0.098
   },
   {
     "id": "coal",
     "name": "CO2 emissions from",
-    "description": "Pounds of coal burned",
+    "description": "pounds of coal burned (1 coal/1,000 pounds)",
     "amt": 1.1
-  },
-  {
-    "id": "tanker",
-    "name": "CO2 emissions from",
-    "description": "Tanker trucks' worth of gasoline",
-    "amt": 0.0009
   },
   {
     "id": "home",
     "name": "CO2 emissions from",
-    "description": "Homes' electricity use for one year",
+    "description": "homes' electricity use for one year",
     "amt": 0.0002
   },
   {
-    "id": "railcar",
+    "id": "oil",
     "name": "CO2 emissions from",
-    "description": "Railcars' worth of coal burned",
-    "amt": 0.0004
-  },
-  {
-    "id": "oil barrel",
-    "name": "CO2 emissions from",
-    "description": "Barrels of oil consumed",
+    "description": "barrels of oil consumed",
     "amt": 0.002
   },
   {
-    "id": "propane cylinder",
+    "id": "propane",
     "name": "CO2 emissions from",
-    "description": "Propane cylinders used for home barbeques",
+    "description": "propane cylinders used for home barbeques",
     "amt": 0.041
-  },
-  {
-    "id": "coal plant",
-    "name": "CO2 emissions from",
-    "description": "Coal-fired power plants in one year",
-    "amt": 0.0001
   },
   {
     "id": "smartphones",
     "name": "CO2 emissions from",
-    "description": "Number of smartphones charged",
+    "description": "number of smartphones charged (1 phone/10,000 charged)",
     "amt": 90.17
-  },
-  {
-    "id": "recycled",
-    "name": "Greenhouse gas emissions avoided by",
-    "description": "Tons of waste recycled instead of landfilled",
-    "amt": 0.0003
-  },
-  {
-    "id": "garbage truck",
-    "name": "Greenhouse gas emissions avoided by",
-    "description": "Garbage trucks of waste recycled instead of landfilled",
-    "amt": 0.009
   },
   {
     "id": "trash bags",
     "name": "Greenhouse gas emissions avoided by",
-    "description": "Trash bags of waste recycled instead of landfilled",
+    "description": "trash bags of waste recycled instead of landfilled",
     "amt": 0.043
   },
   {
-    "id": "wind",
+    "id": "lightbulb",
     "name": "Greenhouse gas emissions avoided by",
-    "description": "Wind turbines running for a year",
-    "amt": 0.001
-  },
-  {
-    "id": "light bulb",
-    "name": "Greenhouse gas emissions avoided by",
-    "description": "Incandescent lamps switched to LEDs",
+    "description": "incandescent lamps switched to LEDs",
     "amt": 0.038
   },
   {
-    "id": "tree seedling",
+    "id": "seedlings",
     "name": "Carbon Sequestered by",
-    "description": "Tree seedlings grown for 10 years",
+    "description": "tree seedlings grown for 10 years",
     "amt": 0.017
   },
   {
     "id": "trees",
     "name": "Carbon Sequestered by",
-    "description": "Acres of U.S. forests in one year",
+    "description": "acres of U.S. forests in one year",
     "amt": 0.001
-  },
-  {
-    "id": "acres",
-    "name": "Carbon Sequestered by",
-    "description": "Acres of U.S. forests preserved from conversion to cropland in one year",
-    "amt": 0.00048
   }
 ]
