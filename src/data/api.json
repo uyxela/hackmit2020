@@ -58,5 +58,9 @@
   {
     "code": "IE",
     "carbonintensity": 493
+  },
+  {
+    "code": "AT",
+    "carbonintensity": 172
   }
 ]
