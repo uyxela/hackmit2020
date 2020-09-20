@@ -36,7 +36,6 @@ const Sub = styled.sub`
 const HomeButton = styled.button`
     border: none;
     background-color: #45AA29;
-    padding: 20px 30px 20px 30
     padding: 20px 30px 20px 30px;
     margin: 20px;
     color: white;

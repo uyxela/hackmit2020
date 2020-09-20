@@ -6,7 +6,7 @@ import Calculate from "./components/calculate";
 import Header from "./components/header";
 import Home from "./components/home";
 import Learn from "./components/learn";
-import Ranking from "./components/Ranking";
+import Compare from "./components/compare";
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
         <Header />
         <Route exact path="/" component={Home} />
         <Route path="/calculate" component={Calculate} />
+        <Route path="/compare" component={Compare} />
         <Route path="/learn" component={Learn} />
         <Route path="/about" component={About} />
-        <Route path="/ranking" component={Ranking} />
       </Router>
     </>
   );
