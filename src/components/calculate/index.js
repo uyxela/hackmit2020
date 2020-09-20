@@ -33,6 +33,15 @@ const CalculateDescription = styled.p`
     text-justify: auto;
 `;
 
+const CalculateA = styled.a`
+    color: white;
+`;
+
+const Sub = styled.sub`
+  vertical-align: sub;
+  font-size: smaller;
+`;
+
 function Calculate() {
     const [step, setStep] = useState(1);
 
@@ -40,7 +49,9 @@ function Calculate() {
         <CalculateContainer>
             <ComponentContainer>
                 <CalculateTitle>Calculate Your Impact</CalculateTitle>
-                <CalculateDescription>Find the carbon impact of your machine learning model computations by indicating indicating relevant configuration options.</CalculateDescription>
+                <CalculateDescription>Find the carbon impact of a machine learning model computation by indicating indicating relevant configuration options.</CalculateDescription>
+                <br />
+                <CalculateDescription>Data obtained from <CalculateA href="https://iq.opengenus.org/floating-point-operations-per-second-flops-of-machine-learning-models/">OpenGenus IQ</CalculateA> and <CalculateA href="https://github.com/mlco2/impact/tree/master/data">MLCO<Sub>2</Sub> Impact</CalculateA>.</CalculateDescription>
                 <CalculateComponent step={step} setStep={setStep} />
             </ComponentContainer>
         </CalculateContainer>
