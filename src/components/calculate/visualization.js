@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+<<<<<<< HEAD
 import { Stage, Layer, Path } from "react-konva";
 import { equivnum } from '../logic';
 import convs from '../../data/gfgconvs.json';
+=======
+import { Stage, Layer, Star, Text, Image } from "react-konva";
+import car from "../../assets/images/oil.svg";
+>>>>>>> 7a3e773dced0a2026840dc8aea1bb9f893e92aac
 
 const VisualizationTitle = styled.h2`
   font-weight: bold;

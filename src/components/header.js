@@ -38,6 +38,7 @@ function Header() {
                 <NavButton href="/calculate">Calculate</NavButton>
                 <NavButton href="/learn">Learn</NavButton>
                 <NavButton href="/about">About</NavButton>
+                <NavButton href="/Ranking">Ranking</NavButton>
             </Nav>
         </NavBar>
     )
