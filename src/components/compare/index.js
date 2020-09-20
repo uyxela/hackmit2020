@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CompareComponent from "./compareComponent";
 
 const CompareContainer = styled.div`
   display: flex;
@@ -41,6 +42,14 @@ const Sub = styled.sub`
   font-size: smaller;
 `;
 
+const CompareComponentContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+`;
+
 function Compare() {
 
   return (
@@ -60,8 +69,11 @@ function Compare() {
           <CompareA href="https://www.co2signal.com/">
             CO<Sub>2</Sub> Signal API
           </CompareA>
-          .
         </CompareDescription>
+        <CompareComponentContainer>
+              <CompareComponent />
+              <CompareComponent />
+          </CompareComponentContainer>
       </ComponentContainer>
     </CompareContainer>
   );
