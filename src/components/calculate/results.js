@@ -33,6 +33,12 @@ const ResultsValue = styled.h3`
     color: #45AA29;
 `;
 
+const ResultsDescription = styled.h2`
+  font-weight: medium;
+  font-size: 1.5rem;
+  margin: 10px 40px 10px 40px;
+`;
+
 const Sub = styled.sub`
   vertical-align: sub;
   font-size: smaller;
@@ -58,6 +64,12 @@ function Results(props) {
                 <ResultsValue>{conversionData && Math.round(conversionData.carbon * 100) / 100}</ResultsValue>
             </ResultsSection>
             <ResultsButton onClick={() => { props.setStep(3) }}>Visualize this data</ResultsButton>
+            <br />
+            <br />
+            <ResultsTitle>Ways you might be able to reduce your carbon impact.</ResultsTitle>
+            <ResultsDescription>Consider the <a href="https://en.wikipedia.org/wiki/Power_usage_effectiveness .">Power Usage Efficiency (PUE)</a> of your datacenter.</ResultsDescription>
+            <ResultsDescription>Consider the <a href="https://www.sciencedirect.com/science/article/pii/S2214629616302985?via%3Dihub">time of day</a> you are running your computations.</ResultsDescription>
+            <ResultsDescription>Consider the <a href="https://www.ibm.com/blogs/nordic-msp/iceland-data-centers/">location of the datacenter</a>, data centers typically need more cooling energy when it's hot and humid.</ResultsDescription>
         </>
     )
 }
