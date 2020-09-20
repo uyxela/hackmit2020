@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import models from '../../data/models.json';
 import gpus from '../../data/gpus.json';
@@ -65,10 +65,15 @@ function Inputs(props) {
         model: "VGG19",
         gpu: "RTX 2080 Ti",
         hours: 12,
-        provider: "Google Cloud Platform",
+        provider: "gcp",
         efficiency: 0.43,
         region: "asia-east1"
     });
+
+    useEffect(() => {
+        window.localStorage.removeItem('calculateData');
+        window.localStorage.removeItem('conversionData');
+    }, [])
 
     return (
         <>
@@ -117,7 +122,7 @@ function Inputs(props) {
                         ...config,
                         region: e.target.value
                     })}>
-                        {sources.map(source => source.providerName === config.provider ? <option value={source.region}>{source.region}</option> : null)}
+                        {sources.map(source => source.provider === config.provider ? <option value={source.region}>{source.region}</option> : null)}
                     </InputsSelect>
                 </InputsLabel>) : (<InputsLabel>
                     Carbon Efficiency (kg/kWh):
@@ -128,8 +133,8 @@ function Inputs(props) {
                 </InputsLabel>)}
             </InputsForm>
             <InputsButton onClick={() => {
-                props.setStep(2); 
                 window.localStorage.setItem('calculateData', JSON.stringify(config));
+                props.setStep(2);
             }}>Calculate my carbon impact</InputsButton>
         </>
     )
