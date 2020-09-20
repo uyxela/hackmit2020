@@ -2,8 +2,9 @@ import gpus from "../data/gpus.json";
 import sources from "../data/sources.json";
 import models from "../data/models.json";
 import gfgconvs from "../data/gfgconvs.json";
-import green from '../data/green500.json';
-import countries from '../data/countries.json';
+import green from "../data/green500.json";
+import countries from "../data/countries.json";
+import api from "../data/api.json";
 
 export function withprovider(gpuhardware, hours, provider, region, modelname) {
   // Eq: (GFLOP / s) * (3600s / hr) * hrs * (W/GFLOPS32) * hrs * (kg CO2 / KWh)
@@ -93,7 +94,7 @@ export function equivnum(pattern, carbon) {
   //     return carbon * gfgconv.amt;
   //   }
   // });
-  const conv = gfgconvs.find(gfgconv => gfgconv.id === pattern);
+  const conv = gfgconvs.find((gfgconv) => gfgconv.id === pattern);
   if (conv) {
     return carbon * conv.amt;
   }
@@ -104,41 +105,21 @@ export function equivnum(pattern, carbon) {
 }
 
 export function calcCarbon(name) {
-  const machine = green.find(item => item.Name === name);
+  const machine = green.find((item) => item.Name === name);
   console.log(machine);
-  let power;
-  let carbonIntensity;
+  let power = 1;
+  var carbonIntensity = 1;
   if (machine) {
     power = machine["Power (kW)"];
-    const country = countries.find(item => item.name === machine.Country);
+    const country = countries.find((item) => item.name === machine.Country);
 
-    var myHeaders = new Headers();
-    myHeaders.append("auth-token", "9d4f72692b0aa319");
-    
-    var requestOptions = {
-      method: 'GET',
-      headers: myHeaders,
-      redirect: 'follow',
-      mode: 'no-cors'
-    };
-    
-    fetch("https://api.co2signal.com/v1/latest?countryCode=FR", requestOptions)
-      .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        carbonIntensity = Math.round(result.data.carbonIntensity * 100)/100;
-      })
-      .catch(error => console.log('error', error));
-
-    // fetch(`https://api.co2signal.com/v1/latest?countryCode=${country['alpha-2']}`, {
-    //   mode: 'no-cors',
-    //   headers: {
-    //     "Auth-Token": "9d4f72692b0aa319"
-    //   }
-    // }).then(response => response.json()).then(jsonResponse => {
-    //   console.log(jsonResponse);
-    //   carbonIntensity = Math.round(jsonResponse.data.carbonIntensity * 100)/100;
-    // })
+    let s = country["alpha-2"];
+    api.forEach((ap) => {
+      if (ap.code == s) {
+        carbonIntensity = ap.carbonintensity / 1000.0;
+      }
+    });
+    console.log(`DID NOT FIND THE COUNTRY CODE: ${s}`);
   }
   return power * carbonIntensity;
 }
