@@ -26,6 +26,7 @@ const PageContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    background-color: #83d86f;
     overflow: hidden;
 `;
 
@@ -57,20 +58,37 @@ const LearnImage = styled.img`
 
 function Learn() {
     return (
-        <LearnContainer>
-            <PageContainer>
+        <>
+            <LearnContainer>
                 <LearnTitle>
                     What YOUR Data Means!
                 </LearnTitle>
                 <LearnImage src={large1} />
-            </PageContainer>
+            </LearnContainer>
             <PageContainer>
                 <LearnImage src={large2} />
                 <LearnTitle>
                     CO2 & Friends?
                 </LearnTitle>
+                <LearnText>At the very epicenter of our global climate crisis lies one of the most fundamental building blocks of our atmosphere: Carbon Dioxide (CO2). I hate to break it to you, but this is because of you.</LearnText>
+                <br />
+                <LearnText>But it's not just you! It's your neighbor, your friends, your co-workers, and in thsi ever-growing technological society, it's our computers, too.</LearnText>
             </PageContainer>
-        </LearnContainer>
+        </>
+        // <LearnContainer>
+        //     <PageContainer>
+        //         <LearnTitle>
+        //             What YOUR Data Means!
+        //         </LearnTitle>
+        //         <LearnImage src={large1} />
+        //     </PageContainer>
+        //     <PageContainer>
+        //         <LearnImage src={large2} />
+        //         <LearnTitle>
+        //             CO2 & Friends?
+        //         </LearnTitle>
+        //     </PageContainer>
+        // </LearnContainer>
     )
 }
 
