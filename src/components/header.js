@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import logoSrc from '../assets/images/logo.svg'
 
 const NavBar = styled.div`
     height: 10vh;
     background-color: white;
-    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 `;
 const Logo = styled.img`
-
+    margin: 20px;
+    cursor: pointer;
 `;
 const Nav = styled.div`
-    width: 60%;
+    width: 60vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -34,7 +35,7 @@ const NavButton = styled.a`
 function Header() {
     return(
         <NavBar>
-            <Logo />
+            <Logo src={logoSrc} onClick={() => window.location.replace("/")} />
             <Nav>
                 <NavButton href="/calculate">Calculate</NavButton>
                 <NavButton href="/learn">Learn</NavButton>

@@ -43,6 +43,7 @@ const HomeButton = styled.button`
     font-family: Quicksand, sans-serif;
     border-radius: 100px;
     align-self: center;
+    cursor: pointer;
 `;
 
 const HomeDescription = styled.p`
