@@ -10,12 +10,8 @@ export function withprovider(gpuhardware, hours, provider, region, modelname) {
       carbon *= model.flops;
     }
   });
-  // `carbon`: # of GFLOPs that will occur in execution
-  // console.log("# of GFLOPs that will occur: " + carbon);
-
   gpus.forEach((gpu) => {
     if (gpu.name === gpuhardware) {
-      // console.log("GFLOPS32/W: " + gpu["GFLOPS32/W"]);
       carbon /= gpu["GFLOPS32/W"];
     }
   });
@@ -60,5 +56,4 @@ export function withee(gpuhardware, hours, ee, region, modelname) {
   carbon *= ee;
   carbon /= 1000.0;
   // console.log("final kg of CO2: " + carbon);
-  return [kilowatt, carbon];
-}
+  return [kilowatt, carbon]};
