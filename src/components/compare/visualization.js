@@ -73,7 +73,6 @@ function Visualization(props) {
   // eslint-disable-next-line
   useEffect(() => {
     const image = images.find(img => img.name === metric);
-    setConversionData(calcCarbon(props.computer.Name));
     setNumber(generateShapes(Math.ceil(equivnum(metric,conversionData)), image.scale));
     setData(image.path);
   }, [metric, props]);

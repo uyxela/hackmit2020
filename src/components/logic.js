@@ -122,7 +122,7 @@ export function calcCarbon(name) {
       mode: 'no-cors'
     };
     
-    fetch("https://api.co2signal.com/v1/latest?countryCode=FR", requestOptions)
+    fetch("http://api.co2signal.com/v1/latest?countryCode=FR", requestOptions)
       .then(response => response.json())
       .then(result => {
         console.log(result);

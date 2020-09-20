@@ -57,6 +57,7 @@ const AboutImage = styled.img`
 const AboutName = styled.h2`
     color: white;
     font-size: 3rem;
+    cursor: pointer;
 `;
 
 // const AboutBio = styled.h3`
@@ -76,17 +77,17 @@ function About() {
                 <AboutSection>
                     <AboutItem>
                         <AboutImage />
-                        <AboutName>Alex Yu</AboutName>
+                        <AboutName onClick={() => window.open("https://github.com/uyxela")}>Alex Yu</AboutName>
                         {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
-                        <AboutName>Andy Vo</AboutName>
+                        <AboutName onClick={() => window.open("https://github.com/andyyvo")}>Andy Vo</AboutName>
                         {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                     <AboutItem>
                         <AboutImage />
-                        <AboutName>Dhrumil Patel</AboutName>
+                        <AboutName onClick={() => window.open("https://github.com/dhrumilp15")}>Dhrumil Patel</AboutName>
                         {/* <AboutBio>One liner</AboutBio> */}
                     </AboutItem>
                 </AboutSection>
