@@ -1,0 +1,38 @@
+[
+  {
+    "name": "VGG19",
+    "flops": 19.6
+  },
+  {
+    "name": "VGG16",
+    "flops": 15.3
+  },
+  {
+    "name": "ResNet 152",
+    "flops": 11.3
+  },
+  {
+    "name": "ResNet 101",
+    "flops": 7.6
+  },
+  {
+    "name": "ResNet 50",
+    "flops": 3.8
+  },
+  {
+    "name": "ResNet 34",
+    "flops": 3.6
+  },
+  {
+    "name": "ResNet 18",
+    "flops": 1.8
+  },
+  {
+    "name": "GoogleNet",
+    "flops": 1.5
+  },
+  {
+    "name": "AlexNet",
+    "flops": 0.72
+  }
+]
