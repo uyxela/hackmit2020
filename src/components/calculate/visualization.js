@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Stage, Layer, Star, Text } from "react-konva";
-import car from "../../assets/images/car.png";
 
 const VisualizationTitle = styled.h2`
   font-weight: bold;
