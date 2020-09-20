@@ -15,9 +15,7 @@ const Logo = styled.img`
     cursor: pointer;
 `;
 const Nav = styled.div`
-    width: 60vh;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
 `;
@@ -29,7 +27,7 @@ const NavButton = styled.a`
     font-family: Quicksand, sans-serif;
     text-decoration: none;
     font-weight: 500;
-    margin: 5%;
+    margin: 5% 10% 5% 10%;
 `;
 
 function Header() {
