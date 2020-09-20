@@ -105,9 +105,9 @@ function Inputs(props) {
                     ...config,
                     provider: e.target.value
                 })}>
-                        <option value="Google Cloud Platform">Google Cloud Platform</option>
-                        <option value="Amazon Web Services">Amazon Web Services</option>
-                        <option value="Azure">Azure</option>
+                        <option value="gcp">Google Cloud Platform</option>
+                        <option value="aws">Amazon Web Services</option>
+                        <option value="azure">Azure</option>
                         <option value="Private Infrastructure">Private Infrastructure</option>
                     </InputsSelect>
                 </InputsLabel>
