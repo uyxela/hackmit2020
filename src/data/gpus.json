@@ -1,0 +1,200 @@
+[
+  {
+    "name": "RTX 2080 Ti",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 13.45,
+    "TFLOPS16": 26.9,
+    "GFLOPS32/W": 53.8,
+    "GFLOPS16/W": 107.6,
+    "memory": 11,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "RTX 2080",
+    "type": "gpu",
+    "watt": 215,
+    "TFLOPS32": 10,
+    "TFLOPS16": 20,
+    "GFLOPS32/W": 46.51,
+    "GFLOPS16/W": 93.02,
+    "memory": 8,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "GTX 1080 Ti",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 11.34,
+    "TFLOPS16": 0.17,
+    "GFLOPS32/W": 45.36,
+    "GFLOPS16/W": 0.68,
+    "memory": 11,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "GTX 1080",
+    "type": "gpu",
+    "watt": 180,
+    "TFLOPS32": 8,
+    "TFLOPS16": 0.13,
+    "GFLOPS32/W": 44.44,
+    "GFLOPS16/W": 0.72,
+    "memory": 8,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "AMD RX480",
+    "type": "gpu",
+    "watt": 150,
+    "TFLOPS32": 5.8,
+    "TFLOPS16": 5.8,
+    "GFLOPS32/W": 38.67,
+    "GFLOPS16/W": 38.67,
+    "memory": 8,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "Titan V",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 14.9,
+    "TFLOPS16": 29.8,
+    "GFLOPS32/W": 59.6,
+    "GFLOPS16/W": 119.2,
+    "memory": 12,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "Tesla V100",
+    "type": "gpu",
+    "watt": 300,
+    "TFLOPS32": 15,
+    "TFLOPS16": 30,
+    "GFLOPS32/W": 50,
+    "GFLOPS16/W": 100,
+    "memory": 32,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "Tesla P100",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 9.526,
+    "TFLOPS16": 19.05,
+    "GFLOPS32/W": 38.1,
+    "GFLOPS16/W": 76.2,
+    "memory": 16,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "Tesla K40c",
+    "type": "gpu",
+    "watt": 245,
+    "TFLOPS32": 5.046,
+    "TFLOPS16": "",
+    "GFLOPS32/W": 20.6,
+    "GFLOPS16/W": "",
+    "memory": 12,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "Tesla K80",
+    "type": "gpu",
+    "watt": 300,
+    "TFLOPS32": 4.113,
+    "TFLOPS16": "",
+    "GFLOPS32/W": 13.71,
+    "GFLOPS16/W": "",
+    "memory": 12,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "TPU2",
+    "type": "tpu",
+    "watt": 250,
+    "TFLOPS32": 22,
+    "TFLOPS16": 45,
+    "GFLOPS32/W": 88,
+    "GFLOPS16/W": 180,
+    "memory": 64,
+    "source": "https://www.nextplatform.com/2018/05/10/tearing-apart-googles-tpu-3-0-ai-coprocessor/"
+  },
+  {
+    "name": "TPU3",
+    "type": "tpu",
+    "watt": 200,
+    "TFLOPS32": 45,
+    "TFLOPS16": 90,
+    "GFLOPS32/W": 225,
+    "GFLOPS16/W": 450,
+    "memory": 128,
+    "source": "https://www.nextplatform.com/2018/05/10/tearing-apart-googles-tpu-3-0-ai-coprocessor/"
+  },
+  {
+    "name": "Intel Xeon E5-2699",
+    "type": "cpu",
+    "watt": 145,
+    "TFLOPS32": 0.7,
+    "TFLOPS16": 0.7,
+    "GFLOPS32/W": 4.83,
+    "GFLOPS16/W": 4.83,
+    "memory": "",
+    "source": "https://ark.intel.com/content/www/us/en/ark/products/81061/intel-xeon-processor-e5-2699-v3-45m-cache-2-30-ghz.html"
+  },
+  {
+    "name": "AGX Xavier",
+    "type": "gpu",
+    "watt": 30,
+    "TFLOPS32": 16,
+    "TFLOPS16": 32,
+    "GFLOPS32/W": 533.33,
+    "GFLOPS16/W": 1066.67,
+    "memory": "",
+    "source": "https://elinux.org/Jetson_AGX_Xavier"
+  },
+  {
+    "name": "GTX TITAN X",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 6.691,
+    "TFLOPS16": "",
+    "GFLOPS32/W": 26.76,
+    "GFLOPS16/W": "",
+    "memory": 12,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "TITAN X Pascal",
+    "type": "gpu",
+    "watt": 250,
+    "TFLOPS32": 10.97,
+    "TFLOPS16": 0.17,
+    "GFLOPS32/W": 43.9,
+    "GFLOPS16/W": 0.68,
+    "memory": 12,
+    "source": "techpowerup.com"
+  },
+  {
+    "name": "T4",
+    "type": "gpu",
+    "watt": 70,
+    "TFLOPS32": 8.141,
+    "TFLOPS16": 65.13,
+    "GFLOPS32/W": 116.3,
+    "GFLOPS16/W": 930,
+    "memory": 16,
+    "source": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/tesla-t4/t4-tensor-core-datasheet-951643.pdf"
+  },
+  {
+    "name": "Titan RTX",
+    "type": "gpu",
+    "watt": 280,
+    "TFLOPS32": 16.31,
+    "TFLOPS16": 32.63,
+    "GFLOPS32/W": 58.25,
+    "GFLOPS16/W": 116.5,
+    "memory": 24,
+    "source": "https://www.techpowerup.com/gpu-specs/titan-rtx.c3311"
+  }
+]
