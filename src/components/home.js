@@ -34,15 +34,16 @@ const Sub = styled.sub`
 `;
 
 const HomeButton = styled.button`
-  border: none;
-  background-color: #45aa29;
-  padding: 20px 30px 20px 30px;
-  margin: 20px;
-  color: white;
-  font-size: 2rem;
-  font-family: Quicksand, sans-serif;
-  border-radius: 100px;
-  align-self: center;
+    border: none;
+    background-color: #45AA29;
+    padding: 20px 30px 20px 30px;
+    margin: 20px;
+    color: white;
+    font-size: 2rem;
+    font-family: Quicksand, sans-serif;
+    border-radius: 100px;
+    align-self: center;
+    cursor: pointer;
 `;
 
 const HomeDescription = styled.p`
