@@ -1,6 +1,6 @@
 # Green Machine
 
-Green Machine is a web app that helps you calculate the carbon impact of your computations through fun and interactive visualizations.
+Green Machine is a web app that estimates and visualizes the carbon cost of high-performance computations through estimating the carbon cost of your ML models.
 
 ![Screenshot of Green Machine home page](./images/greenmachine-home.png "Green Machine home page")
 
@@ -9,7 +9,7 @@ The project is built with React, styled-components, and uses data from [TOP500](
 ### Features
 
 - Calculate the carbon emissions from your high performance computing services, get insights on how to reduce your carbon impact, and see the data in interactive visualizations.
-- Compare the energy efficiency of leading supercomputers such as MIT's Satori with other systems including your own.
+- Compare the energy efficiency of leading supercomputerss MIT's Satori with other systems including your own.
 - ...
 
 ![Screenshot of Green Machine home page](./images/greenmachine-calculate1.png "Green Machine home page")
@@ -21,3 +21,5 @@ The project is built with React, styled-components, and uses data from [TOP500](
 Run `npm install` and `npm start` to launch the app locally. `npm run build` to build a production ready copy.
 
 Visit [https://green-compute-challenge.web.app/compare](https://green-compute-challenge.web.app/compare) for a live demo of this project.
+
+Created with :sparkling_heart: by [Dhrumil Patel](https://github.com/dhrumilp15), [Alex Yu](https://github.com/uyxela), and [Andy Vo](https://github.com/andyyvo)!
